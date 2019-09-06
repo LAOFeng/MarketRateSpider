@@ -1,5 +1,5 @@
 # MarketRateSpider
-A spider for market rate incl. swap, Libor, USDCNY etc.
+A spider for market rate incl. Swap, Libor, USDCNY etc.
 
 License   
 This work is licensed under a MIT license.
