@@ -32,7 +32,6 @@ class SwapRate():
                 maturity.append(each.find('td',class_="first").text.strip())
                 swap.append(each.find('td',class_="value-cell").text.strip())
                 date.append(each.find('td',class_="value-cell last").text.strip())
-        print(maturity,swap,date)
         dic1={self.head[0]:maturity, self.head[1]:swap, self.head[4]:date}
         df = pd.DataFrame(dic1)
         return df
@@ -59,7 +58,6 @@ class Libor():
         for each in tr:
             maturity.append(each.find_all('td')[0].text.strip())
             libor.append(each.find_all('td')[1].text.strip().replace('\xa0',''))
-        print(maturity,libor)
         dic2 = {self.head[0]:maturity, self.head[1]:libor}
         df2 = pd.DataFrame(dic2)
         return df2
